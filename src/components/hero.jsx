@@ -1,10 +1,36 @@
 import React from 'react'
 import food from "..//assets/food1.jpg"
 
+const useSplideSlider = (selector) => {
+  useEffect(() => {
+    const splide = new Splide(selector, {
+      type: 'loop',
+      drag: 'free',
+      focus: 'center',
+      perPage: 1,
+      breakpoints: {
+        640: {
+          perPage: 1,
+        },
+      },
+      autoScroll: {
+        speed: 1,
+      },
+    });
+
+    splide.mount({ AutoScroll });
+
+    // Clean up function
+    return () => {
+      splide.destroy();
+    };
+  }, []);
+};
+
 const Hero = () => {
   return (
     <div className='bg-black flex w-screen relative'>
-        <div className='bg-white text-black m-5 rounded-xl p-5 flex flex-col gap-5'>
+        <div className='hidden bg-white text-black m-5 rounded-xl p-5 md:flex flex-col gap-5'>
             <p>Mobile phones & Tablet</p>
             <p>Electronics</p>
             <p>Home, Furniture & Appliances</p>
@@ -13,8 +39,8 @@ const Hero = () => {
             <p>Sports, Arts & Outdoors</p>
             <p>Agriculture</p>
         </div>
-            <img src={food} alt=""
-                className='rounded-xl my-5 absolute top-0 bottom-0 right-0 w-1/2 object-cover' />
+            {/* <img src={food} alt=""
+                className='rounded-xl my-5 absolute top-0 bottom-0 right-0 w-1/2 object-cover' /> */}
     </div>
   )
 }
