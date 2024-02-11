@@ -19,7 +19,7 @@ const Navbar = () => {
                 <strong>0808 104 5656</strong>
             </div>
         </div>
-        <div className='flex h-10 bg-gray-200 px-3 md:justify-center items-center gap-5 md:gap-10 text-sm font-medium'>
+        <div className='flex h-10 bg-gray-200 px-3 justify-center items-center gap-5 md:gap-10 text-sm font-medium'>
             <p>CEFPaY</p>
             <p>Become a vendor</p>
             <p className='flex gap-1 items-center'>services
@@ -58,25 +58,25 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-        <div className='flex gap-2 text-sm justify-center items-center md:hidden'>
+        <div className='flex gap-3 text-sm justify-center items-center md:hidden'>
             <div className='flex flex-col items-center'>
-                <TbDotsCircleHorizontal />
+                <TbDotsCircleHorizontal size={20}/>
                 <h2>Browse All</h2>
             </div>
             <div className='flex flex-col items-center'>
-                <IoShirtOutline />
+                <IoShirtOutline size={20} />
                 <h2>Fashion</h2>
             </div>
             <div className='flex flex-col items-center'>
-                <HiOutlineDesktopComputer />
+                <HiOutlineDesktopComputer size={20} />
                 <h2>computers</h2>
             </div>
             <div className='flex flex-col items-center'>
-                <HiOutlineDevicePhoneMobile />
+                <HiOutlineDevicePhoneMobile size={20} />
                 <h2>phones</h2>
             </div>
             <div className='flex flex-col items-center'>
-                <IoPricetagsOutline />
+                <IoPricetagsOutline size={20} />
                 <h2>All Deals</h2>
             </div>
         </div>
