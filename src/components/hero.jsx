@@ -33,7 +33,7 @@ const Hero = () => {
   }, []); 
 
   return (
-    <div className='bg-black flex justify-between w-screen md:px-10 md:py-5 p-3'>
+    <div className='bg-black flex md:justify-between justify-center w-screen md:px-10 md:py-5 p-3'>
         <div className='hidden bg-white text-black rounded-xl p-5 md:flex flex-col gap-5'>  
             <div className='flex gap-2'>
               <HiOutlineDevicePhoneMobile size={20} />
