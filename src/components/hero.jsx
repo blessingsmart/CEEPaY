@@ -33,7 +33,7 @@ const Hero = () => {
   }, []); 
 
   return (
-    <div className='bg-black flex md:justify-between justify-center w-screen md:px-10 md:py-5 p-3'>
+    <div className='bg-black flex md:justify-between justify-center my-5 w-screen md:px-10 md:py-5 p-3'>
         <div className='hidden bg-white text-black rounded-xl p-5 md:flex flex-col gap-5'>  
             <div className='flex gap-2'>
               <HiOutlineDevicePhoneMobile size={20} />
@@ -46,7 +46,7 @@ const Hero = () => {
             <p>Sports, Arts & Outdoors</p>
             <p>Agriculture</p>
         </div>
-        <div id="splide1" className="splide  basis-3/4 ">
+        <div id="splide1" className="splide  md:basis-3/4 ">
           <div className="splide__track rounded-lg ">
             <ul className="splide__list "> 
             <li className="splide__slide px-5 ">
