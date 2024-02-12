@@ -1,37 +1,44 @@
-import React from 'react'
-import food from "..//assets/food1.jpg"
+import React, { useEffect } from 'react'
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import sales from "..//assets/sales.jpg"
+import Splide from '@splidejs/splide';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import '@splidejs/react-splide/css';
 
-const useSplideSlider = (selector) => {
+
+
+const Hero = () => {
+
   useEffect(() => {
-    const splide = new Splide(selector, {
+  
+    const splide1 = new Splide('#splide1', {
       type: 'loop',
       drag: 'free',
       focus: 'center',
       perPage: 1,
       breakpoints: {
         640: {
-          perPage: 1,
+          perPage: 1,},
         },
-      },
       autoScroll: {
         speed: 1,
       },
-    });
-
-    splide.mount({ AutoScroll });
-
-    // Clean up function
+    }).mount({ AutoScroll });
+  
     return () => {
-      splide.destroy();
+        // Destroy Splide instances on unmount to prevent memory leaks.
+        splide1.destroy();
     };
-  }, []);
-};
+  
+  }, []); 
 
-const Hero = () => {
   return (
-    <div className='bg-black flex w-screen relative'>
-        <div className='hidden bg-white text-black m-5 rounded-xl p-5 md:flex flex-col gap-5'>
-            <p>Mobile phones & Tablet</p>
+    <div className='bg-black flex justify-between w-screen md:px-10 md:py-5 p-3'>
+        <div className='hidden bg-white text-black rounded-xl p-5 md:flex flex-col gap-5'>  
+            <div className='flex gap-2'>
+              <HiOutlineDevicePhoneMobile size={20} />
+              <p>Mobile phones & Tablet</p>
+            </div>
             <p>Electronics</p>
             <p>Home, Furniture & Appliances</p>
             <p>Health & Beauty</p>
@@ -39,8 +46,17 @@ const Hero = () => {
             <p>Sports, Arts & Outdoors</p>
             <p>Agriculture</p>
         </div>
-            {/* <img src={food} alt=""
-                className='rounded-xl my-5 absolute top-0 bottom-0 right-0 w-1/2 object-cover' /> */}
+        <div id="splide1" className="splide  basis-3/4 ">
+          <div className="splide__track rounded-lg ">
+            <ul className="splide__list "> 
+            <li className="splide__slide px-5 ">
+              <img src={sales} 
+              alt=""
+              className='rounded-lg'/>
+            </li>
+            </ul>
+          </div>
+        </div>
     </div>
   )
 }
