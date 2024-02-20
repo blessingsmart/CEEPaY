@@ -18,7 +18,7 @@ const BrowserRouter = createBrowserRouter([
         path: "/login",
         element: (
             <React.Suspense fallback={<Loading />}>
-                <login />
+                <Login />
             </React.Suspense>
         ),
     },
