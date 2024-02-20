@@ -3,7 +3,7 @@ import Loading from "../src/components/loading";
 import { createBrowserRouter }  from "react-router-dom";
 
 const Home = lazy(() => import("./pages/home"));
-// const Login = lazy(() => import("./pages/Login"));
+const Login = lazy(() => import("./pages/login"));
 
 const BrowserRouter = createBrowserRouter([
     {
@@ -14,14 +14,14 @@ const BrowserRouter = createBrowserRouter([
             </React.Suspense>
         ),
     },
-    // {
-    //     path: "/login",
-    //     element: (
-    //         <React.Suspense fallback={<Loading />}>
-    //             <Login />
-    //         </React.Suspense>
-    //     ),
-    // },
+    {
+        path: "/login",
+        element: (
+            <React.Suspense fallback={<Loading />}>
+                <login />
+            </React.Suspense>
+        ),
+    },
 ]);
 
 export default BrowserRouter;
