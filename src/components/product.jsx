@@ -10,7 +10,7 @@ import fashion from "../assets/ad-4.png";
 import generator from "../assets/ad-5.png";
 import mobile from "../assets/ad-6.png";
 import watches from "../assets/ad-7.png";
-import blender from "../assets/item.png";
+import blender from "../assets/item-0.png";
 import han from "../assets/item-1.png";
 import rice from "../assets/item-2.png";
 import whiskey from "../assets/item-3.png";
